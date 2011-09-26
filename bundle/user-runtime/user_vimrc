@@ -10,6 +10,7 @@ set helplang=En						" Help is in English
 set history=200						" Remember past commands
 set hlsearch						" Hilite the search term
 set incsearch						" Hilite items mathing the current search
+set laststatus=2					" Always show a status line
 set linebreak						" Better control over linebreaks
 set more							" Prompt after a full screen of data
 set noerrorbells					" No beeps, please
@@ -95,6 +96,10 @@ cnoremap   :simalt ~
 inoremap   :simalt ~
 noremap   :simalt ~
 
+" Add Firefox-style buffer switching
+noremap <C-Tab> :bnext<CR>
+noremap <C-S-Tab> :bprev<CR>
+
 " Quick macro to insert current date\time stamp 
 :nnoremap <F5> "=strftime("%d-%b-%Y %H:%M:%S")<CR>P
 :inoremap <F5> <C-R>=strftime("%d-%b-%Y %H:%M:%S")<CR>
@@ -120,3 +125,9 @@ let use_xhtml=1							" Generate valid XHTML
 " Swap the current paragraph with the next
 :nnoremap g{ {dap}p{
 
+" Buftabs settings
+" https://github.com/vim-scripts/buftabs
+let g:buftabs_only_basename=1						" Exclude directory from the filepath
+let g:buftabs_in_statusline=1						" Put buffer list in the status line
+let g:buftabs_active_highlight_group="Folded"		" Highlight the active buffer
+let g:buftabs_inactive_highlight_group="NonText"	" Lowlight the inactive buffer list
