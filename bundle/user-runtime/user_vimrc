@@ -43,6 +43,13 @@ syntax on
 set backupdir=%HOMEPATH%\\Documents\\VimBackup,~\\,.
 set backup
 
+" UI stuff
+behave mswin							" Act like Windows
+set guioptions=emr
+set guifont=Bitstream_Vera_Sans_Mono:h8:cANSI
+set selectmode=mouse,key
+:color zenburn
+
 " MSWindows-style key-mapping
 "    Backspace handling
 vnoremap <BS> d
@@ -88,13 +95,6 @@ cnoremap   :simalt ~
 inoremap   :simalt ~
 noremap   :simalt ~
 
-" UI stuff
-behave mswin							" Act like Windows
-set guioptions=emr
-set showtabline=2
-set guifont=Bitstream_Vera_Sans_Mono:h8:cANSI
-set selectmode=mouse,key
-
 " Quick macro to insert current date\time stamp 
 :nnoremap <F5> "=strftime("%d-%b-%Y %H:%M:%S")<CR>P
 :inoremap <F5> <C-R>=strftime("%d-%b-%Y %H:%M:%S")<CR>
@@ -119,3 +119,4 @@ let use_xhtml=1							" Generate valid XHTML
 :nnoremap <silent> gr "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR><c-l>
 " Swap the current paragraph with the next
 :nnoremap g{ {dap}p{
+
