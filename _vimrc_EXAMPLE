@@ -10,4 +10,4 @@ call pathogen#helptags()
 filetype plugin indent on
 
 " Source the real vimrc
-:source $HOME\vimfiles\bundle\user_vimrc
+:source $HOME\vimfiles\bundle\user-runtime\user_vimrc
