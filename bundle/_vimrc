@@ -1,0 +1,2 @@
+" Keep this file under bundles/, make most .vimrc changes here. Source it with
+" a stub .vimrc in the user directory. See ../_vimrc_EXAMPLE.
