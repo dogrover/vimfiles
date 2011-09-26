@@ -1,5 +1,5 @@
 " Copy this file to ~/_vimrc. It's kept here to avoid making an awkwardly
-" named git repo and the user directory level.
+" named git repo at the user directory level.
 
 " Housekeeping for pathogen
 set nocompatible
@@ -8,3 +8,6 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
+
+" Source the real vimrc
+:source $HOME\vimfiles\bundle\user_vimrc
