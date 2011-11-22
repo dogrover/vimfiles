@@ -41,7 +41,7 @@ set window=80						" Default size for new windows
 syntax on
 
 " Backup options. Consolidate all backups in a single location.
-set backupdir=%HOMEPATH%\\Documents\\VimBackup,~\\,.
+set backupdir=%USERPROFILE%\\Documents\\VimBackup,~\\,.
 set backup
 
 " UI stuff
