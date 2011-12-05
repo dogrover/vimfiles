@@ -72,13 +72,6 @@ inoremap  gggHG
 "    Ctrl-C: Copy to clipboard
 vnoremap  "+y
 vnoremap <C-Insert> "+y
-"    Ctrl-Q: Quit
-noremap  
-"    Ctrl-S: Save
-vnoremap  :update
-nnoremap  :update
-onoremap  :update
-inoremap  :update
 "    Ctrl-V: Paste
 nmap  "+gP
 omap  "+gP
@@ -92,17 +85,17 @@ inoremap  
 "    Ctrl-Z: Undo
 noremap  u
 inoremap  u
-cnoremap   :simalt ~
-inoremap   :simalt ~
-noremap   :simalt ~
+cnoremap   :simalt ~
+inoremap   :simalt ~
+noremap   :simalt ~
 
 " Add Firefox-style buffer switching
 noremap <C-Tab> :bnext<CR>
 noremap <C-S-Tab> :bprev<CR>
 
 " Quick macro to insert current date\time stamp 
-:nnoremap <F5> "=strftime("%d-%b-%Y %H:%M:%S")<CR>P
-:inoremap <F5> <C-R>=strftime("%d-%b-%Y %H:%M:%S")<CR>
+:nnoremap <S-F5> "=strftime("%d-%b-%Y %H:%M:%S")<CR>P
+:inoremap <S-F5> <C-R>=strftime("%d-%b-%Y %H:%M:%S")<CR>
 
 " Settings for :TOhtml (built-in command)
 let html_number_lines=1					" Include line numbers
@@ -128,6 +121,11 @@ let use_xhtml=1							" Generate valid XHTML
 " Buftabs settings
 " https://github.com/vim-scripts/buftabs
 let g:buftabs_only_basename=1						" Exclude directory from the filepath
-let g:buftabs_in_statusline=1						" Put buffer list in the status line
+let g:buftabs_in_statusline=0						" DON'T Put buffer list in the status line
 let g:buftabs_active_highlight_group="Folded"		" Highlight the active buffer
 let g:buftabs_inactive_highlight_group="NonText"	" Lowlight the inactive buffer list
+
+" GUndo
+nnoremap <F5> :GundoToggle<CR>
+
+" TODO: Install Vundle
